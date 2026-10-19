@@ -30,7 +30,7 @@ fs.rmSync(outputDirectory, { recursive: true, force: true });
 fs.mkdirSync(outputDirectory, { recursive: true });
 
 for (const directory of ["compartido", "css", "iconos", "js", "paginas"]) {
-  const sourceDirectory = path.resolve(directory);
+  const sourceDirectory = path.resolve("Sistema 2", directory);
 
   if (!fs.existsSync(sourceDirectory)) {
     throw new Error(`Falta la carpeta requerida: ${directory}/`);
