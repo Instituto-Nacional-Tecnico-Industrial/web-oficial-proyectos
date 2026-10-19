@@ -1,0 +1,510 @@
+/* INTIWO S2 | ficha fase 3: equipo/docentes, URLs, sin foto alumno | BACKLOG S2N-03a */
+.intiwo-ficha {
+  width: min(720px, 100%);
+  margin: 2.5rem auto 4rem;
+  padding: 1.5rem 1.25rem 2rem;
+  border-radius: 28px;
+  background: var(--superficie);
+  color: var(--texto);
+  box-sizing: border-box;
+}
+
+.intiwo-ficha h1 {
+  margin: 0 0 0.35rem;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.intiwo-ficha-meta,
+.intiwo-ficha-aviso {
+  margin: 0 0 1.25rem;
+  text-align: center;
+  color: var(--texto-suave);
+  line-height: 1.45;
+}
+
+.intiwo-ficha-bloque {
+  margin: 1.1rem 0 0;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.28);
+}
+
+.intiwo-ficha-bloque:last-child {
+  border-bottom: 0;
+}
+
+.intiwo-ficha-bloque h2 {
+  margin: 0 0 0.45rem;
+  font-size: 1rem;
+}
+
+.intiwo-ficha-bloque p,
+.intiwo-ficha-bloque ul {
+  margin: 0;
+  color: var(--texto-suave);
+  line-height: 1.45;
+}
+
+.intiwo-ficha-equipo,
+.intiwo-ficha-urls {
+  list-style: none;
+  padding: 0;
+}
+
+.intiwo-ficha-urls {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.intiwo-ficha-url {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.intiwo-ficha-url-icono {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: var(--verde);
+  color: var(--negro);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.intiwo-ficha-url-icono svg {
+  width: 18px;
+  height: 18px;
+}
+
+.intiwo-ficha-url a {
+  min-width: 0;
+  color: var(--texto);
+  overflow-wrap: anywhere;
+}
+
+.intiwo-ficha-previa-etiqueta {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+}
+
+.intiwo-ficha-campos {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.intiwo-ficha-campos label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.intiwo-ficha-campos input,
+.intiwo-ficha-campos textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 12px;
+  padding: 0.65rem 1rem;
+  background: var(--negro);
+  color: #f2f0eb;
+  font: inherit;
+}
+
+html[data-theme="light"] .intiwo-ficha-campos input,
+html[data-theme="light"] .intiwo-ficha-campos textarea {
+  background: var(--superficie-2);
+  color: var(--texto);
+}
+
+.intiwo-ficha-campos textarea {
+  min-height: 6rem;
+  resize: vertical;
+}
+
+.intiwo-ficha-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.intiwo-ficha-acciones--guardar {
+  justify-content: center;
+  padding-top: 0.9rem;
+}
+
+.intiwo-ficha-retorno-preview {
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+.intiwo-ficha-retorno-preview[hidden] {
+  display: none;
+}
+
+.intiwo-ficha:not(.es-edicion) [data-ficha-edicion] {
+  display: none;
+}
+
+.intiwo-ficha.es-edicion [data-ficha-lectura] {
+  display: none !important;
+}
+
+.intiwo-ficha[data-tipo="tecnico"] #intiwo-ficha-academico-edicion,
+.intiwo-ficha[data-tipo="tecnico"] #intiwo-ficha-academico {
+  display: none !important;
+}
+
+.intiwo-ficha[data-tipo="academico"] #intiwo-ficha-tecnico-edicion,
+.intiwo-ficha[data-tipo="academico"] #intiwo-ficha-tecnico {
+  display: none !important;
+}
+
+.intiwo-ficha-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.6rem;
+}
+
+.intiwo-ficha-chip {
+  display: inline-flex;
+  align-items: center;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  background: var(--superficie-2);
+  color: var(--texto);
+  font: inherit;
+  font-size: 0.88rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.intiwo-ficha-chip.es-activa,
+.intiwo-ficha-chip:hover {
+  background: var(--verde);
+  color: var(--negro);
+}
+
+.intiwo-panel-etiquetas-velo {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.46);
+  z-index: 70;
+}
+
+.intiwo-panel-etiquetas {
+  position: fixed;
+  z-index: 80;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(560px, calc(100% - 24px));
+  max-height: min(80vh, 36rem);
+  overflow: auto;
+  padding: 1rem 1.1rem 1.2rem;
+  border-radius: 24px;
+  background: var(--superficie);
+  color: var(--texto);
+  box-sizing: border-box;
+}
+
+.intiwo-panel-etiquetas-cabeza {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.intiwo-panel-etiquetas-cabeza h2 {
+  margin: 0;
+}
+
+.intiwo-panel-etiquetas-ayuda,
+.intiwo-panel-etiquetas-fam {
+  margin: 0.65rem 0 0.4rem;
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+}
+
+.intiwo-panel-etiquetas-busca {
+  display: block;
+  margin: 0.5rem 0 0.25rem;
+  font-size: 0.9rem;
+}
+
+#intiwo-panel-etiquetas-q {
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  background: var(--negro);
+  color: #f2f0eb;
+  font: inherit;
+}
+
+html[data-theme="light"] #intiwo-panel-etiquetas-q {
+  background: var(--superficie-2);
+  color: var(--texto);
+}
+
+.intiwo-panel-etiquetas-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.intiwo-panel-etiquetas-fam {
+  flex-basis: 100%;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.intiwo-ficha-ayuda {
+  margin: 0.2rem 0 0.55rem !important;
+  font-size: 0.82rem;
+  color: var(--texto-suave);
+  line-height: 1.4;
+}
+
+.intiwo-ficha-auto {
+  margin: 0 0 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--verde);
+}
+
+.intiwo-ficha-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0.45rem 0;
+  position: relative;
+}
+
+.intiwo-ficha-tb-grupo {
+  position: relative;
+}
+
+.intiwo-ficha-tb-menu {
+  position: absolute;
+  z-index: 12;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 180px;
+  padding: 8px;
+  border-radius: 12px;
+  background: var(--superficie);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.intiwo-ficha-tb-menu.es-abierto {
+  display: flex;
+}
+
+.intiwo-ficha-tb-menu[hidden] {
+  display: none !important;
+}
+
+.intiwo-ficha-tb-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.intiwo-ficha-tb-swatch {
+  width: 22px;
+  height: 22px;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.intiwo-ficha-tb-cromo {
+  display: flex;
+  gap: 6px;
+  width: 100%;
+  margin-top: 6px;
+}
+
+.intiwo-ficha-tb-hex {
+  flex: 1;
+  min-width: 0;
+  height: 32px;
+  border: 0;
+  border-radius: 8px;
+  padding: 0 8px;
+  background: var(--negro);
+  color: #f2f0eb;
+  font: inherit;
+  font-size: 0.8rem;
+}
+
+.intiwo-ficha-tb-btn,
+.intiwo-ficha-tb-select {
+  position: relative;
+  min-height: 36px;
+  border: 0;
+  border-radius: 10px;
+  padding: 0.3rem 0.55rem;
+  background: var(--negro);
+  color: #f2f0eb;
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.intiwo-ficha-tb-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.intiwo-ficha-tb-btn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.intiwo-ficha-tb-btn[data-tip]:hover::after,
+.intiwo-ficha-tb-select[data-tip]:hover::after {
+  content: attr(data-tip);
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  top: calc(100% + 6px);
+  width: max-content;
+  max-width: 220px;
+  padding: 0.4rem 0.55rem;
+  border-radius: 10px;
+  background: var(--negro);
+  color: #f2f0eb;
+  font-size: 0.75rem;
+  line-height: 1.3;
+  pointer-events: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+}
+
+html[data-theme="light"] .intiwo-ficha-tb-btn[data-tip]:hover::after,
+html[data-theme="light"] .intiwo-ficha-tb-select[data-tip]:hover::after {
+  background: var(--superficie-2);
+  color: var(--texto);
+}
+
+html[data-theme="light"] .intiwo-ficha-tb-btn,
+html[data-theme="light"] .intiwo-ficha-tb-select {
+  background: var(--superficie-2);
+  color: var(--texto);
+}
+
+.intiwo-ficha-rico {
+  min-height: 6rem;
+  border-radius: 12px;
+  padding: 0.65rem 1rem;
+  background: var(--negro);
+  color: #f2f0eb;
+  font-family: "Roboto Serif", serif;
+}
+
+.intiwo-ficha-rico--linea {
+  min-height: 38px;
+  height: 38px;
+  overflow: hidden;
+}
+
+html[data-theme="light"] .intiwo-ficha-rico {
+  background: var(--superficie-2);
+  color: var(--texto);
+}
+
+.intiwo-ficha.es-formal .intiwo-ficha-rico,
+.intiwo-ficha.es-formal #intiwo-ficha-campo-titulo {
+  font-family: "Roboto Serif", serif;
+}
+
+.intiwo-ficha-url-cuadro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 72px;
+  border: 0;
+}
+
+.intiwo-ficha-url-tipo {
+  font-family: "Roboto Serif", serif;
+  font-size: 0.68rem;
+  color: var(--texto-suave);
+  text-align: center;
+}
+
+.intiwo-url-fila,
+.intiwo-integrante-fila {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0.35rem 0;
+}
+
+.intiwo-url-input,
+.intiwo-integrante-input {
+  flex: 1;
+  min-width: 0;
+  height: 38px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 12px;
+  padding: 0.45rem 1rem;
+  background: var(--negro);
+  color: #f2f0eb;
+  font: inherit;
+}
+
+html[data-theme="light"] .intiwo-url-input,
+html[data-theme="light"] .intiwo-integrante-input {
+  background: var(--superficie-2);
+  color: var(--texto);
+}
+
+.intiwo-url-check {
+  color: var(--verde);
+  display: grid;
+  place-items: center;
+}
+
+.intiwo-btn-mas {
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 12px;
+  margin-top: 0.35rem;
+  background: var(--verde);
+  color: var(--negro);
+  display: inline-grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.intiwo-ficha-urls-edicion {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 320px) {
+  .intiwo-ficha {
+    width: calc(100% - 16px);
+    padding: 1rem 0.75rem 1.2rem;
+  }
+}

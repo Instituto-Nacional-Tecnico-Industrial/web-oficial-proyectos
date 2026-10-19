@@ -1,0 +1,1 @@
+-- INTIWO SQL | archivo: politicas-rls.sql | para: RLS por rol no por email | VACIO | BACKLOG DB-03 | copiar tambien a Sistema 2/supabase/

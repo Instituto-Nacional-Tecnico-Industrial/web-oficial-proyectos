@@ -1,0 +1,1 @@
+-- INTIWO SQL | archivo: tabla-perfiles.sql | para: perfiles FK auth.users + rol | VACIO | BACKLOG DB-02a | copiar tambien a Sistema 2/supabase/

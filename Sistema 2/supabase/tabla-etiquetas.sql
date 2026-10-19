@@ -1,0 +1,1 @@
+-- Copia de referencia. Fuente canonica: Sistema 1/supabase/tabla-etiquetas.sql. Misma base.

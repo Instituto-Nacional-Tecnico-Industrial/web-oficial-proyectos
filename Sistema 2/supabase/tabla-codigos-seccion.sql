@@ -1,0 +1,1 @@
+-- INTIWO SQL | archivo: tabla-codigos-seccion.sql | para: claves tipo DS2B | VACIO | BACKLOG DB-02b | copiar tambien a Sistema 2/supabase/

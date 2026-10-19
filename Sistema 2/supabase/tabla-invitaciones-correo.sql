@@ -1,0 +1,1 @@
+-- INTIWO SQL | archivo: tabla-invitaciones-correo.sql | para: emails antes del registro | VACIO | BACKLOG DB-02g | copiar tambien a Sistema 2/supabase/

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cuentas | INTIWO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,400;0,8..144,700&display=swap" rel="stylesheet">
+  <link rel="icon" href="../../iconos/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../css/variables-tema-diurno-nocturno.css">
+  <link rel="stylesheet" href="../../css/layout-hamburguesa-y-overlay.css">
+  <link rel="stylesheet" href="../../../Sistema 1/css/cuentas-acceso.css">
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute">
+    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+  </svg>
+  <header class="intiwo-barra">
+    <a href="../proyectos/pagina-hub-proyectos.html" aria-label="Volver a proyectos">
+      <img class="intiwo-distintivo" src="../../iconos/marca-inti/Logotipo%20Barra-01.svg" alt="I.N.T.I.">
+    </a>
+    <div class="intiwo-barra-derecha">
+      <button class="intiwo-interruptor-tema" type="button" data-intiwo-tema aria-label="Cambiar tema">
+        <svg class="intiwo-tema-icon intiwo-tema-icon--sun" width="14" height="14"><use href="#i-sun"/></svg>
+        <svg class="intiwo-tema-icon intiwo-tema-icon--moon" width="14" height="14"><use href="#i-moon"/></svg>
+      </button>
+    </div>
+  </header>
+  <main class="intiwo-cuentas-main">
+    <section class="intiwo-cuentas-card" aria-labelledby="intiwo-cuentas-titulo">
+      <h1 id="intiwo-cuentas-titulo">Cuentas institucionales</h1>
+      <p>El acceso es el mismo para ambos sistemas. Inicia sesión o regístrate en las pantallas de Cuentas.</p>
+      <div class="intiwo-cuentas-acciones">
+        <a class="intiwo-cuentas-opcion" href="../../../Sistema 1/paginas/cuentas/pagina-iniciar-sesion.html">Iniciar sesión</a>
+        <a class="intiwo-cuentas-opcion intiwo-cuentas-opcion--secundaria" href="../../../Sistema 1/paginas/cuentas/pagina-registrarme.html">Registrarme</a>
+      </div>
+      <a class="intiwo-cuentas-volver" href="../proyectos/pagina-hub-proyectos.html">Volver a proyectos</a>
+    </section>
+  </main>
+  <script src="../../js/tema/persistir-tema-diurno-nocturno.js"></script>
+  <script type="module" src="../../js/cms/cargar-footer-cms.js"></script>
+</body>
+</html>

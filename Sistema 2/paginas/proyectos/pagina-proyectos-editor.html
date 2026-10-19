@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mis proyectos | INTIWO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,400;0,8..144,700&display=swap" rel="stylesheet">
+  <link rel="icon" href="../../iconos/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../css/variables-tema-diurno-nocturno.css">
+  <link rel="stylesheet" href="../../css/layout-hamburguesa-y-overlay.css">
+  <link rel="stylesheet" href="../../css/hub-y-pildoras-proyectos.css">
+  <link rel="stylesheet" href="../../css/catalogo-y-listado-proyectos.css">
+</head>
+<body data-seccion-actual="proyectos">
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute">
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-pencil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></symbol>
+  </svg>
+  <header class="intiwo-barra">
+    <button class="intiwo-btn-icono" type="button" data-intiwo-menu aria-expanded="false" aria-controls="intiwo-menu" aria-label="Abrir menu"><svg width="24" height="24"><use href="#i-menu"/></svg></button>
+    <a href="pagina-hub-proyectos.html" aria-label="INTI"><img class="intiwo-distintivo" src="../../iconos/marca-inti/Logotipo%20Barra-01.svg" alt="I.N.T.I."></a>
+    <div class="intiwo-barra-derecha">
+      <button class="intiwo-interruptor-tema" type="button" data-intiwo-tema aria-label="Cambiar tema">
+        <svg class="intiwo-tema-icon intiwo-tema-icon--sun" width="14" height="14"><use href="#i-sun"/></svg>
+        <svg class="intiwo-tema-icon intiwo-tema-icon--moon" width="14" height="14"><use href="#i-moon"/></svg>
+      </button>
+    </div>
+  </header>
+  <div id="intiwo-velo" class="intiwo-velo"></div>
+  <nav id="intiwo-menu" class="intiwo-menu" aria-label="Secciones INTIWO">
+    <ul class="intiwo-menu-lista">
+      <li><a class="intiwo-menu-item es-activo" data-seccion="proyectos" href="pagina-hub-proyectos.html"><svg><use href="#i-folder"/></svg> Proyectos</a></li>
+    </ul>
+    <div class="intiwo-menu-pie"><a class="intiwo-menu-item intiwo-menu-cuentas" href="../cuentas/pagina-cuentas.html"><svg><use href="#i-user"/></svg> Cuentas</a></div>
+  </nav>
+  <main class="intiwo-main">
+    <section class="intiwo-listado-codigo">
+      <h1>Mis proyectos</h1>
+      <p>Proyectos que tus docentes te han asignado. Puedes abrir cada ficha para ver su contenido.</p>
+      <p id="intiwo-editor-estado" class="intiwo-listado-vacio" role="status" aria-live="polite">Cargando proyectos…</p>
+      <div class="intiwo-editor-lista-acciones">
+        <button class="intiwo-pildora" id="intiwo-editor-actualizar" type="button">Actualizar lista</button>
+        <p id="intiwo-editor-actualizacion" class="intiwo-listado-vacio" role="status" aria-live="polite" hidden></p>
+      </div>
+      <div id="intiwo-editor-proyectos"></div>
+      <a class="intiwo-pildora intiwo-editor-volver" href="pagina-hub-proyectos.html">Volver a Proyectos</a>
+    </section>
+  </main>
+  <script src="../../js/tema/persistir-tema-diurno-nocturno.js"></script>
+  <script src="../../js/auth/sesion-roles-auth.js"></script>
+  <script src="../../js/cromo/menu-hamburguesa-overlay.js"></script>
+  <script type="module" src="../../js/proyectos/listado-proyectos-editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Asignaturas | INTIWO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,400;0,8..144,700&display=swap" rel="stylesheet">
+  <link rel="icon" href="../../iconos/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../css/variables-tema-diurno-nocturno.css">
+  <link rel="stylesheet" href="../../css/layout-hamburguesa-y-overlay.css">
+  <link rel="stylesheet" href="../../css/hub-y-pildoras-proyectos.css?v=164">
+  <link rel="stylesheet" href="../../css/catalogo-y-listado-proyectos.css?v=165">
+</head>
+<body data-seccion-actual="proyectos">
+  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute">
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></symbol>
+    <symbol id="i-house" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-pencil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"/><path d="M8 7h6"/><path d="M8 11h8"/></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol>
+    <symbol id="i-chip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="8" height="8" x="8" y="8" rx="1"/><path d="M4 10h4M4 14h4M16 10h4M16 14h4M10 4v4M14 4v4M10 16v4M14 16v4"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M3 21 4.5 16A9 9 0 1 1 8 19.5L3 21z"/><path d="M8.5 9.5c.5 2.5 2.5 4.5 5 5"/></symbol>
+  </svg>
+
+  <header class="intiwo-barra">
+    <button class="intiwo-btn-icono" type="button" data-intiwo-menu aria-expanded="false" aria-controls="intiwo-menu" aria-label="Abrir menu">
+      <svg width="24" height="24"><use href="#i-menu"/></svg>
+    </button>
+    <a href="../proyectos/pagina-hub-proyectos.html" aria-label="INTI">
+      <img class="intiwo-distintivo" src="../../iconos/marca-inti/Logotipo%20Barra-01.svg" alt="I.N.T.I.">
+    </a>
+    <div class="intiwo-barra-derecha">
+      <button class="intiwo-interruptor-tema" type="button" data-intiwo-tema aria-label="Cambiar tema">
+        <svg class="intiwo-tema-icon intiwo-tema-icon--sun" width="14" height="14"><use href="#i-sun"/></svg>
+        <svg class="intiwo-tema-icon intiwo-tema-icon--moon" width="14" height="14"><use href="#i-moon"/></svg>
+      </button>
+      <a class="intiwo-pildora" id="intiwo-accion-rol" hidden>
+        <svg aria-hidden="true"><use data-intiwo-accion-rol-icono href="#i-pencil"/></svg>
+        <span data-intiwo-accion-rol-texto></span>
+      </a>
+    </div>
+  </header>
+
+  <div class="intiwo-franja-busqueda">
+    <div class="intiwo-busqueda">
+      <span class="intiwo-busqueda-lupa" aria-hidden="true"><svg width="20" height="20"><use href="#i-search"/></svg></span>
+      <input id="intiwo-q" type="search" placeholder="Busca algún proyecto de tu interés...." autocomplete="off">
+      <div id="intiwo-sugerencias" class="intiwo-sugerencias">
+        <p id="intiwo-sugerencias-aviso" class="intiwo-sugerencias-aviso">No se encontro ningun resultado bajo ese termino, pero quizas te refieres a</p>
+        <div id="intiwo-sugerencias-lista"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="intiwo-velo" class="intiwo-velo"></div>
+  <nav id="intiwo-menu" class="intiwo-menu" aria-label="Secciones INTIWO">
+    <ul class="intiwo-menu-lista">
+      <li><a class="intiwo-menu-item" data-seccion="inicio" href="../../../Sistema 1/paginas/inicio/pagina-inicio-cms.html"><svg><use href="#i-house"/></svg> Inicio</a></li>
+      <li><a class="intiwo-menu-item" data-seccion="matricula" href="../../../Sistema 1/paginas/matricula/pagina-matricula-nuevo-ingreso.html"><svg><use href="#i-clipboard"/></svg> Matrícula</a></li>
+      <li><a class="intiwo-menu-item" data-seccion="oferta" href="../../../Sistema 1/paginas/oferta-academica/pagina-oferta-academica.html"><svg><use href="#i-book"/></svg> Oferta académica</a></li>
+      <li><!-- TODO-SPLIT-REPO --><a class="intiwo-menu-item es-activo" data-seccion="proyectos" href="../proyectos/pagina-hub-proyectos.html"><svg><use href="#i-folder"/></svg> Proyectos</a></li>
+      <li><a class="intiwo-menu-item" data-seccion="personal" href="../../../Sistema 1/paginas/personal/pagina-personal-instituto.html"><svg><use href="#i-users"/></svg> Personal</a></li>
+      <li><a class="intiwo-menu-item" data-seccion="ubicaciones" href="../../../Sistema 1/paginas/ubicaciones/pagina-ubicaciones.html"><svg><use href="#i-map"/></svg> Ubicaciones</a></li>
+      <li><a class="intiwo-menu-item" data-seccion="historia" href="../../../Sistema 1/paginas/historia/pagina-historia-instituto.html"><svg><use href="#i-clock"/></svg> Historia</a></li>
+      <li><a class="intiwo-menu-item es-desactivado" data-seccion="configuraciones" href="../../../Sistema 1/paginas/configuraciones/pagina-configuraciones.html" aria-disabled="true"><svg><use href="#i-settings"/></svg> Configuraciones</a></li>
+    </ul>
+    <div class="intiwo-menu-pie">
+      <a class="intiwo-menu-item intiwo-menu-cuentas" href="../cuentas/pagina-cuentas.html">
+        <svg aria-hidden="true"><use href="#i-user"/></svg> Cuentas
+      </a>
+    </div>
+  </nav>
+
+  <main class="intiwo-main">
+    <section id="intiwo-especialidades" class="intiwo-especialidades es-abierto">
+      <div class="intiwo-ciclo-fila">
+        <label for="intiwo-ciclo">Año</label>
+        <select id="intiwo-ciclo" class="intiwo-ciclo-select" aria-label="Año lectivo"></select>
+        <p id="intiwo-ciclo-actual" class="intiwo-ciclo-actual" aria-live="polite"></p>
+        <button type="button" id="intiwo-ciclo-incorporar" class="intiwo-ciclo-admin" hidden>Incorporar siguiente año</button>
+        <button type="button" id="intiwo-ciclo-establecer-actual" class="intiwo-ciclo-admin" hidden>Establecer año seleccionado como actual</button>
+      </div>
+      <p id="intiwo-ciclo-estado" class="intiwo-ciclo-estado" role="status" aria-live="polite" hidden></p>
+      <p class="intiwo-especialidades-etiqueta">Asignaturas</p>
+      <div class="intiwo-especialidades-caja">
+        <button class="intiwo-especialidades-chevron" type="button" data-cerrar-catalogo data-lista="asignaturas" aria-label="Ocultar asignaturas" aria-expanded="true" aria-controls="intiwo-lista-especialidades"><svg width="18" height="18"><use href="#i-chevron"/></svg></button>
+        <div id="intiwo-lista-especialidades" class="intiwo-especialidades-lista">
+          <button class="intiwo-pildora-esp" type="button" data-rama="precalculo" disabled><span class="intiwo-pildora-icono"><svg><use href="#i-book"/></svg></span><span>Precálculo</span></button>
+          <button class="intiwo-pildora-esp" type="button" data-rama="ciudadania" disabled><span class="intiwo-pildora-icono"><svg><use href="#i-users"/></svg></span><span>Ciudadanía y valores</span></button>
+          <button class="intiwo-pildora-esp" type="button" data-rama="ciencias" disabled><span class="intiwo-pildora-icono"><svg><use href="#i-gear"/></svg></span><span>Ciencias y tecnología</span></button>
+          <button class="intiwo-pildora-esp" type="button" data-rama="ingles" disabled><span class="intiwo-pildora-icono"><svg><use href="#i-book"/></svg></span><span>Inglés</span></button>
+          <button class="intiwo-pildora-esp" type="button" data-rama="literatura" disabled><span class="intiwo-pildora-icono"><svg><use href="#i-book"/></svg></span><span>Lenguaje y Literatura</span></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="intiwo-pie">
+    <div class="intiwo-pie-grid">
+      <div class="intiwo-pie-marca">
+        <img class="intiwo-sello-pie" src="../../iconos/marca-inti/Logotipo%20Barra-01.svg" alt="I.N.T.I.">
+        <p class="intiwo-eslogan"><em>Líder</em> técnico<br>a nivel<em>nacional</em></p>
+        <a class="intiwo-pildora" href="https://docs.google.com/forms/d/e/1FAIpQLSchOv93fiyvoxF2z_mahlUcUhzbt5FyxfZTupLeODpdBcJjhw/viewform" target="_blank" rel="noopener noreferrer"><span class="intiwo-pildora-icono"><svg><use href="#i-mail"/></svg></span> Inscríbete ahora</a>
+      </div>
+      <div>
+        <h2>SÍGUENOS</h2>
+        <div class="intiwo-pie-redes">
+          <a class="intiwo-red" href="https://www.facebook.com/tecnicosinti/?locale=es_LA" aria-label="Facebook"><svg><use href="#i-facebook"/></svg></a>
+          <a class="intiwo-red" href="https://www.instagram.com/inti.edu.sv/" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a>
+        </div>
+        <h2>LLÁMANOS</h2>
+        <div class="intiwo-pie-llamanos">
+          <a class="intiwo-wa" href="https://wa.me/50377545899"><span class="intiwo-wa-icono"><svg><use href="#i-whatsapp"/></svg></span> 7754-5899</a>
+        </div>
+      </div>
+      <div>
+        <h2>ENLACES</h2>
+        <div class="intiwo-pie-enlaces">
+          <a href="../../../Sistema 1/paginas/inicio/pagina-inicio-cms.html">Inicio</a>
+          <a href="../../../Sistema 1/paginas/matricula/pagina-matricula-nuevo-ingreso.html">Matrícula</a>
+          <a href="../../../Sistema 1/paginas/oferta-academica/pagina-oferta-academica.html">Oferta académica</a>
+          <a href="../proyectos/pagina-hub-proyectos.html">Proyectos</a>
+          <a href="../../../Sistema 1/paginas/historia/pagina-historia-instituto.html">Historia</a>
+        </div>
+      </div>
+    </div>
+    <p class="intiwo-copy">©2026 Instituto Nacional Técnico Industrial. Todos los derechos reservados</p>
+  </footer>
+
+  <script src="../../js/tema/persistir-tema-diurno-nocturno.js"></script>
+  <script src="../../js/auth/sesion-roles-auth.js"></script>
+  <script src="../../js/auth/panel-configuraciones-cuentas.js"></script>
+  <script src="../../js/cromo/cursor-intiwo.js"></script>
+  <script src="../../js/cromo/menu-hamburguesa-overlay.js"></script>
+  <script src="../../js/cromo/boton-personalizar-o-evaluar.js"></script>
+  <script src="../../js/busqueda/buscar-etiquetas-fuzzy.js?v=163"></script>
+  <script src="../../js/busqueda/buscar-proyectos.js?v=163"></script>
+  <script src="../../js/catalogo/ramas-y-prefijos.js"></script>
+  <script src="../../js/catalogo/navegar-catalogo.js?v=165"></script>
+
+  <script type="module" src="../../js/supabase/cliente-supabase.js"></script>
+  <script type="module" src="../../js/catalogo/ciclos-especialidades.js?v=201"></script>
+  <script type="module" src="../../js/cms/cargar-footer-cms.js"></script>
+</body>
+</html>

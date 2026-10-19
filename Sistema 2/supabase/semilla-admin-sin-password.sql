@@ -1,0 +1,1 @@
+-- INTIWO SQL | archivo: semilla-admin-sin-password.sql | para: UPDATE rol admin intiwo11543, SIN password | VACIO | BACKLOG DB-09 | copiar tambien a Sistema 2/supabase/

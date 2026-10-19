@@ -1,0 +1,2 @@
+-- Referencia S2 (misma BD). Canonico: Sistema 1/supabase/storage-buckets.sql. No aplicar dos veces.
+-- Bucket `inicio` publico; escritura admin. Sin bucket personal.

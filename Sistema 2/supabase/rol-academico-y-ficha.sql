@@ -1,0 +1,5 @@
+-- Copia de referencia, no ejecutar desde Sistema 2.
+-- Fuente canonica: Sistema 1/supabase/rol-academico-y-ficha.sql. Misma base.
+-- Academico es docente responsable de proyectos academicos: crea y edita los
+-- proyectos donde es autor, gestiona coautoria y mano de obra, y publica/archiva.
+-- No administra cuentas, codigos tecnicos, ciclos, CMS ni bloqueos de edicion.

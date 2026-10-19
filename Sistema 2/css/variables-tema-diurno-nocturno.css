@@ -1,0 +1,53 @@
+/* INTIWO | paleta ASE diurno/nocturno y especialidades | BACKLOG SH-02 */
+:root,
+html[data-theme="dark"] {
+  --verde: #539507;
+  --fondo: #0f0f0f;
+  --superficie: #282a2c;
+  --superficie-2: #37393b;
+  --texto: #f2f0eb;
+  --texto-suave: #b0b0b0;
+  --hover-menu: #7c7c7c;
+  --negro: #0f0f0f;
+  --esp-automotriz: #166534;
+  --esp-mecanica: #eab308;
+  --esp-software: #ea580c;
+  --esp-electronica: #0000ff;
+  --esp-itsi: #64748b;
+  --esp-electricos: #e61010;
+}
+
+html[data-theme="light"] {
+  --fondo: #f6f3ee;
+  --superficie: #ffffff;
+  --superficie-2: #e9e3d8;
+  --texto: #111111;
+  --texto-suave: #4d4d4a;
+  --hover-menu: #dfeccd;
+  --negro: #0f0f0f;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto Serif", serif;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
+html {
+  scrollbar-color: var(--verde) var(--fondo);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--fondo);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--verde);
+  border-radius: 8px;
+}

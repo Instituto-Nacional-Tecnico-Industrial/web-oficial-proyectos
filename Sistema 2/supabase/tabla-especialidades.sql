@@ -1,0 +1,1 @@
+-- INTIWO SQL | archivo: tabla-especialidades.sql | para: seed 6 tecnicas + General + hex | VACIO | BACKLOG DB-02c | copiar tambien a Sistema 2/supabase/

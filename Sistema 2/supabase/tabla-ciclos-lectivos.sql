@@ -1,0 +1,1 @@
+-- Copia de referencia. Fuente canonica: Sistema 1/supabase/tabla-ciclos-lectivos.sql. Misma base.

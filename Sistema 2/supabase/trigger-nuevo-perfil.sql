@@ -1,0 +1,1 @@
+-- INTIWO SQL | archivo: trigger-nuevo-perfil.sql | para: auth.users -> perfiles + invitacion | VACIO | BACKLOG DB-05 | copiar tambien a Sistema 2/supabase/

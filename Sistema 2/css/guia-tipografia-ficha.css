@@ -1,0 +1,95 @@
+/* INTIWO S2 | guia de tipografia del Editor | BACKLOG 190 */
+.intiwo-guia {
+  width: min(720px, 100%);
+  margin: 2.5rem auto 4rem;
+  padding: 1.5rem 1.25rem 2rem;
+  border-radius: 28px;
+  background: var(--superficie);
+  color: var(--texto);
+  box-sizing: border-box;
+}
+
+.intiwo-guia h1 {
+  margin: 0 0 0.75rem;
+  font-size: 1.6rem;
+}
+
+.intiwo-guia h2 {
+  margin: 1.4rem 0 0.45rem;
+  font-size: 1.05rem;
+}
+
+.intiwo-guia p,
+.intiwo-guia li {
+  color: var(--texto-suave);
+  line-height: 1.5;
+}
+
+.intiwo-guia code,
+.intiwo-guia pre {
+  font-family: "Courier New", monospace;
+  background: var(--negro);
+  color: #f2f0eb;
+  border-radius: 8px;
+}
+
+.intiwo-guia code {
+  padding: 0.1rem 0.35rem;
+}
+
+.intiwo-guia pre {
+  padding: 0.75rem 1rem;
+  overflow: auto;
+}
+
+html[data-theme="light"] .intiwo-guia code,
+html[data-theme="light"] .intiwo-guia pre {
+  background: var(--superficie-2);
+  color: var(--texto);
+}
+
+.intiwo-guia-campo {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 7rem;
+  border: 0;
+  border-radius: 12px;
+  padding: 0.65rem 1rem;
+  margin: 0.5rem 0 0.75rem;
+  background: var(--negro);
+  color: #f2f0eb;
+  font: inherit;
+}
+
+html[data-theme="light"] .intiwo-guia-campo {
+  background: var(--superficie-2);
+  color: var(--texto);
+}
+
+.intiwo-guia-pasos {
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.25rem;
+  color: var(--texto-suave);
+}
+
+.intiwo-guia-pasos li {
+  margin: 0.45rem 0;
+}
+
+.intiwo-guia-nota {
+  min-height: 1.3rem;
+  font-size: 0.85rem;
+}
+
+.intiwo-guia-nota.es-ok {
+  color: var(--verde);
+}
+
+.intiwo-guia-nota.es-error {
+  color: #E61010;
+}
+
+#intiwo-guia-volver:disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}

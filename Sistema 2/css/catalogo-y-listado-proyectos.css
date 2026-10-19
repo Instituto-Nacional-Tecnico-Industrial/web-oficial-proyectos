@@ -1,0 +1,243 @@
+/* INTIWO S2 | catalogo, filtro y cajas | BACKLOG S2N-02 */
+.intiwo-main > .intiwo-especialidades.es-abierto {
+  max-width: 560px;
+  margin: 3rem auto 4rem;
+  padding: 1.25rem 1.4rem 1.6rem;
+  border-radius: 32px;
+  background: var(--superficie);
+  color: var(--texto);
+}
+
+.intiwo-ciclo-fila {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0 0 1rem;
+  padding-right: 3.25rem;
+}
+
+.intiwo-ciclo-fila label {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.intiwo-ciclo-select,
+.intiwo-filtro-campos select {
+  width: 100%;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  background: var(--negro);
+  color: #f2f0eb;
+  font: inherit;
+}
+
+html[data-theme="light"] .intiwo-ciclo-select,
+html[data-theme="light"] .intiwo-filtro-campos select {
+  background: var(--superficie-2);
+  color: var(--texto);
+}
+
+.intiwo-ciclo-admin {
+  justify-self: start;
+  margin-top: 0.25rem;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  background: var(--verde);
+  color: var(--negro);
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.intiwo-ciclo-actual,
+.intiwo-ciclo-estado {
+  margin: 0;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.intiwo-pildora-esp[data-rama="electricos"]:hover,
+.intiwo-pildora-esp[data-rama="electricos"]:focus-visible,
+.intiwo-pildora-esp[data-rama="electricos"].es-activa {
+  background: #E61010;
+  color: #fff;
+  filter: none;
+}
+
+.intiwo-pildora-esp[data-rama="electricos"]:hover .intiwo-pildora-icono,
+.intiwo-pildora-esp[data-rama="electricos"].es-activa .intiwo-pildora-icono {
+  background: var(--negro);
+  color: #E61010;
+}
+
+.intiwo-filtro,
+.intiwo-listado-codigo {
+  width: min(720px, 100%);
+  margin: 2.5rem auto 4rem;
+  padding: 1.5rem 1.25rem 2rem;
+  border-radius: 28px;
+  background: var(--superficie);
+  color: var(--texto);
+}
+
+.intiwo-filtro h1,
+.intiwo-listado-codigo h1 {
+  margin: 0 0 0.35rem;
+  text-align: center;
+  font-size: 1.6rem;
+  letter-spacing: 0.12em;
+  color: var(--texto);
+}
+
+.intiwo-filtro p,
+.intiwo-listado-codigo p {
+  margin: 0 0 1.25rem;
+  text-align: center;
+  color: var(--texto-suave);
+}
+
+.intiwo-filtro-campos {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0 auto 1.25rem;
+  max-width: 360px;
+}
+
+.intiwo-filtro-campos label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  color: var(--texto);
+}
+
+.intiwo-filtro .intiwo-pildora {
+  display: inline-flex;
+  margin: 0 auto;
+}
+
+.intiwo-caja-proyecto {
+  margin: 0 auto 0.85rem;
+  max-width: 520px;
+  padding: 0.9rem 1.1rem;
+  border-radius: 12px;
+  background: var(--superficie-2);
+  color: var(--texto);
+}
+
+.intiwo-listado-codigo h1.es-asignatura,
+.intiwo-listado-codigo h1.es-etiqueta {
+  letter-spacing: 0;
+}
+
+.intiwo-caja-proyecto a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.intiwo-caja-proyecto strong {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.intiwo-caja-proyecto p {
+  margin: 0 0 0.35rem;
+  text-align: left;
+  color: var(--texto-suave);
+  font-size: 0.92rem;
+}
+
+.intiwo-listado-vacio {
+  text-align: center;
+  color: var(--texto-suave);
+}
+
+.intiwo-editor-volver {
+  display: flex;
+  width: fit-content;
+  margin: 1.5rem auto 0;
+}
+
+.intiwo-editor-lista-acciones {
+  display: grid;
+  justify-items: center;
+  gap: 0.25rem;
+  margin: 0 auto 1rem;
+}
+
+.intiwo-editor-lista-acciones p {
+  margin: 0;
+}
+
+.intiwo-evaluar-ciclo {
+  display: grid;
+  gap: 0.35rem;
+  max-width: 240px;
+  margin: 0 auto 1.25rem;
+  color: var(--texto);
+}
+
+.intiwo-evaluar-ciclo select {
+  border: 0;
+  border-radius: 10px;
+  padding: 0.6rem 0.8rem;
+  background: var(--superficie-2);
+  color: var(--texto);
+  font: inherit;
+}
+
+.intiwo-filtro > h2 {
+  margin: 2rem 0 0.75rem;
+  text-align: center;
+}
+
+.intiwo-evaluar-academico-asignatura {
+  margin: 1.25rem 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(128, 128, 128, 0.28);
+}
+
+.intiwo-evaluar-academico-asignatura h3 {
+  margin: 0 0 0.75rem;
+  text-align: center;
+}
+
+.intiwo-evaluar-codigo {
+  margin: 1.25rem 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(128, 128, 128, 0.28);
+}
+
+.intiwo-evaluar-codigo h2 {
+  margin: 0 0 0.75rem;
+  text-align: center;
+}
+
+.intiwo-evaluar-editores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  margin: 0 0 0.8rem;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 12px;
+  padding: 0.75rem;
+}
+
+.intiwo-evaluar-editores label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.intiwo-proyecto-evaluacion > p {
+  text-align: left;
+}
+
+.intiwo-evaluar-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}

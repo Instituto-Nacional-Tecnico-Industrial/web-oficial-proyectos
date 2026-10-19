@@ -1,0 +1,2 @@
+-- INTIWO | copia de referencia. Fuente canonica: Sistema 1/supabase/tabla-footer-cms.sql
+-- No ejecutar este archivo si ya corriste el de Sistema 1 (misma base).

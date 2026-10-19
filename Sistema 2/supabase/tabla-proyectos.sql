@@ -1,0 +1,1 @@
+-- INTIWO SQL | archivo: tabla-proyectos.sql | para: fichas + urls jsonb github/drive/youtube | VACIO | BACKLOG DB-02f | copiar tambien a Sistema 2/supabase/

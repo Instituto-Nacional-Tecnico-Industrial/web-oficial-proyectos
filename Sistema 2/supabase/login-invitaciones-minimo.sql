@@ -1,0 +1,1 @@
+-- Copia de referencia. Ejecutar SOLO Sistema 1/supabase/login-invitaciones-minimo.sql en el SQL Editor. Misma base.
