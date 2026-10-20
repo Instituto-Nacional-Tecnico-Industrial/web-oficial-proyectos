@@ -1,5 +1,6 @@
 /* INTIWO S2 | nivel + seccion de un ciclo ya elegido | BACKLOG S2N-02c */
 (function () {
+  var BASE_PROYECTOS = "https://instituto-nacional-tecnico-industrial.github.io/web-oficial-proyectos/";
   var params = new URLSearchParams(window.location.search);
   var rama = params.get("rama") || "";
   var anio = params.get("anio") || "2026";
@@ -11,11 +12,11 @@
   var nivelEl = document.getElementById("intiwo-filtro-nivel");
   var seccionEl = document.getElementById("intiwo-filtro-seccion");
   var ir = document.getElementById("intiwo-filtro-ir");
-  var catalogoTecnicos = "../catalogo/pagina-catalogo-tecnicos.html?anio=" + encodeURIComponent(anio);
+  var catalogoTecnicos = BASE_PROYECTOS + "paginas/catalogo/pagina-catalogo-tecnicos.html?anio=" + encodeURIComponent(anio);
 
   if (!meta || meta.tipo !== "tecnico" || !titulo || !claveEl || !nivelEl || !seccionEl || !ir) {
     if (meta && meta.tipo === "academico") {
-      window.location.replace("../listado/pagina-listado-proyectos-codigo.html?tipo=academico&rama=" + encodeURIComponent(rama) + "&anio=" + encodeURIComponent(anio));
+      window.location.replace(BASE_PROYECTOS + "paginas/listado/pagina-listado-proyectos-codigo.html?tipo=academico&rama=" + encodeURIComponent(rama) + "&anio=" + encodeURIComponent(anio));
       return;
     }
     window.location.replace(catalogoTecnicos);
@@ -48,7 +49,7 @@
       return;
     }
     ir.setAttribute("aria-disabled", "false");
-    ir.href = "../listado/pagina-listado-proyectos-codigo.html?tipo=tecnico&rama=" + encodeURIComponent(rama) +
+    ir.href = BASE_PROYECTOS + "paginas/listado/pagina-listado-proyectos-codigo.html?tipo=tecnico&rama=" + encodeURIComponent(rama) +
       "&anio=" + encodeURIComponent(anio) +
       "&clave=" + encodeURIComponent(clave);
   }

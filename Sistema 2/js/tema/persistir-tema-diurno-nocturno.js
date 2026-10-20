@@ -12,8 +12,20 @@
 
   var tema = temaLocal();
 
+  function actualizarFavicon() {
+    var icono = document.querySelector('link[rel~="icon"]');
+    if (!icono) return;
+    var url = new URL(icono.href, document.baseURI);
+    url.pathname = url.pathname.replace(
+      /favicon(?:-claro)?\.svg$/,
+      tema === "light" ? "favicon-claro.svg" : "favicon.svg"
+    );
+    icono.href = url.href;
+  }
+
   function pintar() {
     document.documentElement.setAttribute("data-theme", tema);
+    actualizarFavicon();
     var boton = document.querySelector("[data-intiwo-tema]");
     if (!boton) return;
     boton.setAttribute("data-estado", tema);

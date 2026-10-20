@@ -1,5 +1,6 @@
 /* INTIWO S2 | pildora -> filtro (tecnico) o listado (academico) | BACKLOG S2N-02 */
 (function () {
+  var BASE_PROYECTOS = "https://instituto-nacional-tecnico-industrial.github.io/web-oficial-proyectos/";
   var caja = document.getElementById("intiwo-especialidades");
   var lista = document.getElementById("intiwo-lista-especialidades");
   var chevron = document.querySelector("[data-cerrar-catalogo]");
@@ -35,10 +36,10 @@
       var ramaQ = encodeURIComponent(rama);
       var tipo = encodeURIComponent(meta.tipo);
       if (meta.tipo === "academico") {
-        window.location.href = "../listado/pagina-listado-proyectos-codigo.html?tipo=" + tipo + "&rama=" + ramaQ + "&anio=" + anio;
+        window.location.href = BASE_PROYECTOS + "paginas/listado/pagina-listado-proyectos-codigo.html?tipo=" + tipo + "&rama=" + ramaQ + "&anio=" + anio;
         return;
       }
-      window.location.href = "../filtro/pagina-filtro-anio-seccion.html?tipo=" + tipo + "&rama=" + ramaQ + "&anio=" + anio;
+      window.location.href = BASE_PROYECTOS + "paginas/filtro/pagina-filtro-anio-seccion.html?tipo=" + tipo + "&rama=" + ramaQ + "&anio=" + anio;
     });
   });
 })();

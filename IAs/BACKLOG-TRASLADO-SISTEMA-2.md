@@ -33,8 +33,9 @@ Usar estos destinos exactos para enlaces S2→S1; todos deben ser anchors `<a hr
 | Historia | https://instituto-nacional-tecnico-industrial.github.io/web-oficial/Sistema%201/paginas/historia/pagina-historia-instituto.html |
 | Configuraciones | https://instituto-nacional-tecnico-industrial.github.io/web-oficial/Sistema%201/paginas/configuraciones/pagina-configuraciones.html |
 | Cuentas | https://instituto-nacional-tecnico-industrial.github.io/web-oficial/Sistema%201/paginas/cuentas/pagina-cuentas.html |
+| Proyectos (Sistema 2) | https://instituto-nacional-tecnico-industrial.github.io/web-oficial-proyectos/paginas/proyectos/pagina-hub-proyectos.html |
 
-Configuraciones es una página común que adapta sus opciones a la sesión/rol; no pedir direcciones diferentes por rol. El URL independiente de S2 se añadirá cuando Instituto lo comparta después de publicar.
+Configuraciones es una página común que adapta sus opciones a la sesión/rol; no pedir direcciones diferentes por rol. Instituto confirmó la URL pública de S2 y se verificó que el hub y las páginas enlazadas de ficha/gestión docente responden. La copia local de `web-oficial` ya apunta los enlaces intersistema a los sitios publicados; en S2 se han fijado también los enlaces de páginas y rutas generadas por JavaScript al dominio independiente. Falta sincronizar/publicar esos cambios en ambos repositorios para que surtan efecto.
 
 ## Etapa A — Preparar la copia
 
@@ -42,19 +43,19 @@ Configuraciones es una página común que adapta sus opciones a la sesión/rol; 
    - **Criterio:** inventario del arbol y origen versionado documentados, sin secretos/datos personales.
 2. [ ] **Leer handoff y reglas del proyecto.** Leer de inicio a fin `IAs/BACKLOG.md`, `IAs/RESOLUCIONES.md`, `IAs/HANDOFF-SISTEMA-2.md`, este backlog y `Sistema 2/LEEME.md`.
    - **Criterio:** no se adopta ningun SQL por copiarlo; discrepancias apuntadas antes de editar.
-3. [ ] **Confirmar URL publica destino.** Crear/configurar el repo nuevo y obtener el URL real de Settings > Pages antes de fijar callback o links en S1.
-   - **Criterio:** URL oficial confirmada por Pages; no asumir path ni URL de repositorio.
+3. [x] **Confirmar URL publica destino.** Instituto proporcionó la URL publicada y se verificó que abre el hub de Proyectos.
+   - **URL confirmada:** `https://instituto-nacional-tecnico-industrial.github.io/web-oficial-proyectos/paginas/proyectos/pagina-hub-proyectos.html`.
 
 ## Etapa B — Enlaces y recursos intersistema
 
 4. [ ] **Eliminar referencias relativas a S1.** Buscar en todos los HTML/CSS/JS `Sistema 1`, `../../../Sistema 1`, `../../Sistema 1`, `../Sistema 1` y `TODO-SPLIT-REPO`.
    - **Criterio:** cada uso esta convertido a URL HTTPS de S1 confirmada o a un recurso que se copia correctamente a S2; no hay enlaces que escapen la raiz de Pages.
-5. [ ] **Header/menu hamburguesa.** Logo, Inicio, Matricula, Oferta, Personal, Ubicaciones, Historia, Configuraciones y Cuentas deben redirigir a sus destinos S1 correctos; Proyectos y menu interno permanecen en S2.
+5. [ ] **Header/menu hamburguesa.** Logo, Inicio, Matricula, Oferta, Personal, Ubicaciones, Historia, Configuraciones y Cuentas deben redirigir a sus destinos S1 correctos; Proyectos y todas las páginas internas deben usar URLs absolutas del sitio independiente S2 (no rutas relativas a la copia integrada).
    - **Criterio:** enlaces HTML `<a href="...">`; mismo tab (sin `target="_blank"` ni `window.open`) para todas las rutas S1/S2; verificar cada destino.
-6. [ ] **Footer y hub de Cuentas.** Enlazar menu/footer/cuentas a S1 por URLs absolutas. Resolver hoja `Sistema 1/css/cuentas-acceso.css` y cualquier icono/imagen/css remoto para que no dependa de una ruta hermana inexistente.
-   - **Criterio:** cargar directo cada pagina publicada y no encontrar 404 de CSS, imagen o enlace institucional.
-7. [ ] **Enlace Proyectos desde S1.** En el repo `web-oficial`, actualizar el anchor de Proyectos al URL nuevo confirmado solo despues de que el hub S2 funcione.
-   - **Criterio:** la navegacion cambia de sistema en la misma pestaña; mantener la copia actual S2 del despliegue viejo hasta completar validacion.
+6. [ ] **Footer y enlace de Cuentas.** Enlazar menu/footer/Cuentas a S1 por URLs absolutas. El portal/formularios de acceso viven solo en S1; S2 no debe cargar una hoja de estilos ni scripts locales para login. Resolver cualquier icono/imagen/css remoto para que no dependa de una ruta hermana inexistente.
+   - **Criterio:** cargar directo cada pagina publicada y no encontrar 404 de CSS, imagen o enlace institucional; el enlace Cuentas abre S1 en la misma pestaña.
+7. [ ] **Enlaces de navegación entre sistemas.** Los anchors de Proyectos en S1 y los destinos a S1/S2 en la copia local ya apuntan a sus URLs públicas absolutas. Sincronizar/publicar los cambios en ambos repositorios y verificar que desde el menú de S1 se llega a `web-oficial-proyectos` (no a `web-oficial/Sistema%202`).
+   - **Criterio:** verificar tras publicar que la navegación cambia de sistema en la misma pestaña; mantener la copia actual S2 del despliegue viejo hasta completar validación.
 
 ## Etapa C — GitHub Pages independiente
 

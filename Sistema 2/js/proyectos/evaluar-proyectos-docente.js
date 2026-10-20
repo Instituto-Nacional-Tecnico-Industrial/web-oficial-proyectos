@@ -125,7 +125,7 @@ function projectCard(project, editorNames, codeEditors) {
     modo: "ver"
   });
   const view = element("a", "Ver ficha");
-  view.href = `../ficha/pagina-ficha-proyecto.html?${query.toString()}`;
+  view.href = `https://instituto-nacional-tecnico-industrial.github.io/web-oficial-proyectos/paginas/ficha/pagina-ficha-proyecto.html?${query.toString()}`;
   card.appendChild(view);
 
   const editorFieldset = element("fieldset", null, "intiwo-evaluar-editores");
@@ -189,7 +189,7 @@ async function createProject(code, checkboxes, button) {
       setMessage("Supabase no devolvió el identificador del proyecto creado.");
       return;
     }
-    const url = new URL("../ficha/pagina-ficha-proyecto.html", window.location.href);
+    const url = new URL("https://instituto-nacional-tecnico-industrial.github.io/web-oficial-proyectos/paginas/ficha/pagina-ficha-proyecto.html");
     url.searchParams.set("id", data);
     url.searchParams.set("tipo", "tecnico");
     url.searchParams.set("anio", String(code.anio_lectivo));
@@ -227,13 +227,13 @@ function academicProjectCard(project, subject, teachers, namesById, handWorkCode
     modo: "ver"
   });
   const view = element("a", "Ver ficha");
-  view.href = `../ficha/pagina-ficha-proyecto.html?${query.toString()}`;
+  view.href = `https://instituto-nacional-tecnico-industrial.github.io/web-oficial-proyectos/paginas/ficha/pagina-ficha-proyecto.html?${query.toString()}`;
   card.appendChild(view);
   if (!project.archivado_en) {
     const editQuery = new URLSearchParams(query);
     editQuery.set("modo", "personalizar");
     const edit = element("a", "Editar ficha", "intiwo-pildora es-linea");
-    edit.href = `../ficha/pagina-ficha-proyecto.html?${editQuery.toString()}`;
+    edit.href = `https://instituto-nacional-tecnico-industrial.github.io/web-oficial-proyectos/paginas/ficha/pagina-ficha-proyecto.html?${editQuery.toString()}`;
     card.appendChild(edit);
   }
 
@@ -363,7 +363,7 @@ async function createAcademicProject(subject, checkboxes, button) {
     if (error) throw error;
     if (!data) throw new Error("Supabase no devolvió el identificador del proyecto creado.");
 
-    const url = new URL("../ficha/pagina-ficha-proyecto.html", window.location.href);
+    const url = new URL("https://instituto-nacional-tecnico-industrial.github.io/web-oficial-proyectos/paginas/ficha/pagina-ficha-proyecto.html");
     url.searchParams.set("id", data);
     url.searchParams.set("tipo", "academico");
     url.searchParams.set("anio", selectedYear);

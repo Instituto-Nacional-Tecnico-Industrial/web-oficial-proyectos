@@ -54,11 +54,11 @@
 
   function urlListado(params) {
     try {
-      var u = new URL("../listado/pagina-listado-proyectos-codigo.html", window.location.href);
+      var u = new URL("https://instituto-nacional-tecnico-industrial.github.io/web-oficial-proyectos/paginas/listado/pagina-listado-proyectos-codigo.html");
       Object.keys(params).forEach(function (k) { u.searchParams.set(k, params[k]); });
       return u.href;
     } catch (e) {
-      return "../listado/pagina-listado-proyectos-codigo.html";
+      return "https://instituto-nacional-tecnico-industrial.github.io/web-oficial-proyectos/paginas/listado/pagina-listado-proyectos-codigo.html";
     }
   }
 

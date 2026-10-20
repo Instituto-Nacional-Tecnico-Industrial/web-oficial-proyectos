@@ -21,7 +21,7 @@ function renderProjects(rows) {
     const article = document.createElement("article");
     article.className = "intiwo-caja-proyecto";
     const link = document.createElement("a");
-    link.href = "../ficha/pagina-ficha-proyecto.html?id=" + encodeURIComponent(proyecto.id) +
+    link.href = "https://instituto-nacional-tecnico-industrial.github.io/web-oficial-proyectos/paginas/ficha/pagina-ficha-proyecto.html?id=" + encodeURIComponent(proyecto.id) +
       "&tipo=" + encodeURIComponent(proyecto.tipo) +
       "&anio=" + encodeURIComponent(proyecto.anio_lectivo);
     const title = document.createElement("strong");

@@ -1,6 +1,5 @@
 /* INTIWO S2 | copia de S1/js/auth/sesion-supabase.js */
 import { supabase } from "../supabase/cliente-supabase.js";
-import { recordarSesion } from "./cuentas-sesiones.js";
 
 const CLAVE_ROL = "intiwo-rol";
 
@@ -25,7 +24,7 @@ async function cargarPerfil(userId) {
   if (!supabase || !userId) return null;
   const { data, error } = await supabase
     .from("perfiles")
-    .select("id, rol, nombre, nie, tema, desactivado_en")
+    .select("id, rol, nombre, tema, desactivado_en")
     .eq("id", userId)
     .maybeSingle();
   if (error) {
@@ -49,7 +48,6 @@ async function sincronizar() {
   }
   const perfil = await cargarPerfil(user.id);
   publicarRol(perfil ? perfil.rol : "", perfil);
-  if (perfil) await recordarSesion(supabase, perfil.rol, perfil);
 }
 
 supabase && supabase.auth.onAuthStateChange(() => {

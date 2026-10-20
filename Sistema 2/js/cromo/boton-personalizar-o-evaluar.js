@@ -1,5 +1,6 @@
 /* INTIWO S2 | mismo hueco que Editar S1 | Personalizar / Evaluar | S2N-01b */
 (function () {
+  var BASE_PROYECTOS = "https://instituto-nacional-tecnico-industrial.github.io/web-oficial-proyectos/";
   function rolActual() {
     if (typeof window.intiwoObtenerRol === "function") return window.intiwoObtenerRol();
     var fuentes = [
@@ -11,14 +12,6 @@
     ];
     var valor = fuentes.find(function (v) { return typeof v === "string" && v.trim(); });
     return valor ? String(valor).trim().toLowerCase() : "";
-  }
-
-  function urlRelativa(rel) {
-    try {
-      return new URL(rel, window.location.href).href;
-    } catch (e) {
-      return rel;
-    }
   }
 
   function aplicar() {
@@ -45,20 +38,20 @@
         if (texto) texto.textContent = "Volver al editor";
         params.delete("previsualizar");
         params.set("modo", "personalizar");
-        dest = window.location.pathname + "?" + params.toString();
+        dest = "paginas/ficha/pagina-ficha-proyecto.html?" + params.toString();
       } else if (rol === "editor" && enFicha && params.get("modo") === "personalizar") {
         if (texto) texto.textContent = "Previsualizar";
         params.set("previsualizar", "1");
-        dest = window.location.pathname + "?" + params.toString();
+        dest = "paginas/ficha/pagina-ficha-proyecto.html?" + params.toString();
       } else if (rol === "editor" && enFicha) {
         if (texto) texto.textContent = "Agregar";
         params.set("modo", "personalizar");
-        dest = window.location.pathname + "?" + params.toString();
+        dest = "paginas/ficha/pagina-ficha-proyecto.html?" + params.toString();
       } else if (rol === "editor") {
         if (texto) texto.textContent = "Agregar";
-        dest = "../proyectos/pagina-proyectos-editor.html";
+        dest = "paginas/proyectos/pagina-proyectos-editor.html";
       }
-      boton.setAttribute("href", urlRelativa(dest));
+      boton.setAttribute("href", new URL(dest, BASE_PROYECTOS).href);
       boton.setAttribute("aria-label", texto ? texto.textContent : "Agregar");
       return;
     }
@@ -70,7 +63,7 @@
         icono.setAttribute("href", "#i-folder");
         if (icono.href && icono.href.baseVal !== undefined) icono.href.baseVal = "#i-folder";
       }
-      boton.setAttribute("href", urlRelativa("../evaluar/pagina-evaluar-codigos-docente.html"));
+      boton.setAttribute("href", BASE_PROYECTOS + "paginas/evaluar/pagina-evaluar-codigos-docente.html");
       boton.setAttribute("aria-label", "Gestionar mis proyectos académicos");
       return;
     }
@@ -82,7 +75,7 @@
         icono.setAttribute("href", "#i-clipboard");
         if (icono.href && icono.href.baseVal !== undefined) icono.href.baseVal = "#i-clipboard";
       }
-      boton.setAttribute("href", urlRelativa("../evaluar/pagina-evaluar-codigos-docente.html"));
+      boton.setAttribute("href", BASE_PROYECTOS + "paginas/evaluar/pagina-evaluar-codigos-docente.html");
       boton.setAttribute("aria-label", "Evaluar proyectos");
     }
   }

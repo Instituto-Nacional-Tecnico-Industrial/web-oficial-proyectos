@@ -59,7 +59,7 @@ function renderChips() {
       if (!tag) return;
       const link = document.createElement("a");
       link.className = "intiwo-ficha-chip";
-      link.href = "../listado/pagina-listado-proyectos-codigo.html?etiqueta=" + encodeURIComponent(tag.slug);
+      link.href = "https://instituto-nacional-tecnico-industrial.github.io/web-oficial-proyectos/paginas/listado/pagina-listado-proyectos-codigo.html?etiqueta=" + encodeURIComponent(tag.slug);
       link.textContent = tag.nombre;
       list.appendChild(link);
     });

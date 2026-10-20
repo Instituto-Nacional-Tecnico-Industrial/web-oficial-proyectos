@@ -1,5 +1,6 @@
 /* INTIWO S2 | guia Google Fonts para alumnos; valida antes de volver */
 (function () {
+  var BASE_PROYECTOS = "https://instituto-nacional-tecnico-industrial.github.io/web-oficial-proyectos/";
   var caja = document.getElementById("intiwo-guia-codigo");
   var nota = document.getElementById("intiwo-guia-nota");
   var ir = document.getElementById("intiwo-guia-volver");
@@ -21,9 +22,9 @@
   if (ir) {
     ir.addEventListener("click", function () {
       if (ir.disabled) return;
-      var dest = "pagina-ficha-proyecto.html?modo=personalizar";
+      var dest = BASE_PROYECTOS + "paginas/ficha/pagina-ficha-proyecto.html?modo=personalizar";
       try {
-        dest = sessionStorage.getItem("intiwo-ficha-volver") || dest;
+        dest = sessionStorage.getItem("intiwo-ficha-volver-s2") || dest;
       } catch (e) { /* */ }
       window.location.href = dest;
     });

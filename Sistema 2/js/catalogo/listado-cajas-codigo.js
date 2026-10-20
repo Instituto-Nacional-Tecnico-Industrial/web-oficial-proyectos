@@ -1,5 +1,6 @@
 /* INTIWO S2 | cajas tecnicas por codigo; academicos por asignatura+ciclo | BACKLOG S2N-02d */
 (function () {
+  var BASE_PROYECTOS = "https://instituto-nacional-tecnico-industrial.github.io/web-oficial-proyectos/";
   var params = new URLSearchParams(window.location.search);
   var tipo = params.get("tipo") || "";
   var clave = (params.get("clave") || "").toUpperCase();
@@ -25,7 +26,7 @@
     if (clave) q += "&clave=" + encodeURIComponent(clave);
     if (rama) q += "&rama=" + encodeURIComponent(rama);
     if (anio) q += "&anio=" + encodeURIComponent(anio);
-    return "../ficha/pagina-ficha-proyecto.html?" + q;
+    return BASE_PROYECTOS + "paginas/ficha/pagina-ficha-proyecto.html?" + q;
   }
 
   function pintarCajas(filas) {
@@ -90,7 +91,7 @@
   }
 
   if (!/^[A-Z]{2}[123][A-Z]$/.test(clave)) {
-    var filtro = "../filtro/pagina-filtro-anio-seccion.html?anio=" + encodeURIComponent(anio);
+    var filtro = BASE_PROYECTOS + "paginas/filtro/pagina-filtro-anio-seccion.html?anio=" + encodeURIComponent(anio);
     if (rama) filtro += "&rama=" + encodeURIComponent(rama);
     window.location.replace(filtro);
     return;

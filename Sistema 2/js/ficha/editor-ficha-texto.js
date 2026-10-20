@@ -306,9 +306,12 @@
       fuente.addEventListener("change", function () {
         if (fuente.value === "__guia__") {
           try {
-            sessionStorage.setItem("intiwo-ficha-volver", window.location.pathname + window.location.search);
+            sessionStorage.setItem(
+              "intiwo-ficha-volver-s2",
+              "https://instituto-nacional-tecnico-industrial.github.io/web-oficial-proyectos/paginas/ficha/pagina-ficha-proyecto.html" + window.location.search
+            );
           } catch (e) { /* */ }
-          window.location.href = "pagina-guia-tipografia.html";
+          window.location.href = "https://instituto-nacional-tecnico-industrial.github.io/web-oficial-proyectos/paginas/ficha/pagina-guia-tipografia.html";
           return;
         }
         var opt = fuente.options[fuente.selectedIndex];

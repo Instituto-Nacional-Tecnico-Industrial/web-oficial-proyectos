@@ -26,7 +26,7 @@ function fichaHref(proyecto) {
     modo: "ver"
   });
   if (proyecto.codigo && proyecto.codigo.clave) params.set("clave", proyecto.codigo.clave);
-  return `../ficha/pagina-ficha-proyecto.html?${params.toString()}`;
+  return `https://instituto-nacional-tecnico-industrial.github.io/web-oficial-proyectos/paginas/ficha/pagina-ficha-proyecto.html?${params.toString()}`;
 }
 
 function pintar(asignaciones) {
